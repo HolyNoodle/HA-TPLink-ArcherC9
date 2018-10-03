@@ -91,21 +91,17 @@ class TPLinkArcherC9Scanner(DeviceScanner):
 
         if responseJson['success'] == True:
             token = responseJson['data']['stok']
-            print(self.getAPIUrl(self.host, token, api_endpoints['getDevices']))
+
             response = session.get(self.getAPIUrl(self.host, token, api_endpoints['getDevices']), headers={
                 "Host": self.host,
                 "Origin": "http://{}".format(self.host)
             })
             responseJson = response.json()
-
-            print(self.getAPIUrl(self.host, token, api_endpoints['logout']))
+            
             response = session.post(self.getAPIUrl(self.host, token, api_endpoints['logout']), headers={
                 "Host": self.host,
                 "Origin": "http://{}".format(self.host)
             })
-
-            [print(device) for device in responseJson['data']['access_devices_wireless_host']]
-            [print(device) for device in responseJson['data']['access_devices_wired']]
 
             for device in responseJson['data']['access_devices_wireless_host']:
                 devices[device['ipaddr']] = {
