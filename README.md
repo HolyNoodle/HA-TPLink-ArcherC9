@@ -7,7 +7,6 @@ Custom component for device tracking platform in Home assistant. Works on Archer
 2. `configuration.yaml`:
 
         device_tracker:
-        - platform: bluetooth_tracker
         - platform: tplink_archer_c9
           host: HOST IP # 192.168.0.1
           password: "md5 encrypted password" 
