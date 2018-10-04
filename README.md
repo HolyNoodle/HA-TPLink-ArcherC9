@@ -26,3 +26,16 @@ For Archer C9 models running firmware version 150811 or later please use the enc
 4 - Open the JavaScript console of your browser (usually by pressing F12 and then clicking on “Console”).
 5 - Type document.getElementById("login-password").value; or document.getElementById("pcPassword").value;, depending on your firmware version.
 6 - Copy the returned value to your Home Assistant configuration as password.
+
+#  Works on
+Harware: Raspberry Pi 3 B+
+Python: 3.6.6
+Hassio: 0.79.2
+Archer C9 v5 : 1.2.2 Build 20180423 rel.85787(4555)
+
+(Hassio connected through RJ45 to the router)
+
+# Usage
+This code has been written by me and tested on my own router. 
+I can not assure you it will work. I can not be blamed for any problem with this code.
+I guess you should not have any major issues with it.
