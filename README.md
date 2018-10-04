@@ -29,8 +29,11 @@ For Archer C9 models running firmware version 150811 or later please use the enc
 
 #  Works on
 Harware: Raspberry Pi 3 B+
+
 Python: 3.6.6
+
 Hassio: 0.79.2
+
 Archer C9 v5 : 1.2.2 Build 20180423 rel.85787(4555)
 
 (Hassio connected through RJ45 to the router)
