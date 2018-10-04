@@ -28,7 +28,7 @@ For Archer C9 models running firmware version 150811 or later please use the enc
 6. Copy the returned value to your Home Assistant configuration as password.
 
 #  Works on
-Harware: Raspberry Pi 3 B+
+Hardware: Raspberry Pi 3 B+
 
 Python: 3.6.6
 
