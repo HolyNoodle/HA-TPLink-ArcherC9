@@ -110,11 +110,12 @@ class TPLinkArcherC9Scanner(DeviceScanner):
                     'name': device['hostname']
                 }
 
-            for device in responseJson['data']['access_devices_wired']:
-                devices[device['ipaddr']] = {
-                    'ip': device['ipaddr'],
-                    'mac': device['macaddr'].upper(),
-                    'name': device['hostname']
-                }
+            if 'access_devices_wired' in responseJson['data']:
+              for device in responseJson['data']['access_devices_wired']:
+                  devices[device['ipaddr']] = {
+                      'ip': device['ipaddr'],
+                      'mac': device['macaddr'].upper(),
+                      'name': device['hostname']
+                  }
 
         return devices
